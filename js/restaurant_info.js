@@ -1,9 +1,10 @@
 let restaurant;
-var newMap;
+var map;
 
 /**
- * Initialize map as soon as the page is loaded.
+ * Initialize Google map, called from HTML.
  */
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', (event) => {
   initMap();
 });
@@ -36,6 +37,9 @@ initMap = () => {
 }
 
 /* window.initMap = () => {
+=======
+window.initMap = () => {
+>>>>>>> bac05e5709556f29ecad764742fe377b32ba71e7
   fetchRestaurantFromURL((error, restaurant) => {
     if (error) { // Got an error!
       console.error(error);
@@ -49,7 +53,7 @@ initMap = () => {
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
   });
-} */
+}
 
 /**
  * Get current restaurant from page URL.
