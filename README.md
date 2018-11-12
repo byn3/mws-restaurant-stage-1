@@ -18,17 +18,19 @@ I was provided the code for a restaurant reviews website. The code has a lot of 
 
 3. Added Javascript to make the site work.
 
-4. Added CSS to to al lelements. No overflow occurs. Beauty is here. It can be more pretty.\
+4. Added CSS to to all elements. No overflow occurs. Beauty is here. It can be more pretty.\
 
-5. Explored the provided code, and started to make a plan to implement the required features in three areas: responsive design, accessibility and offline use.
+5. Explored the provided code, and started to make a plan to implement the required features in three areas: responsive design, accessibility and offline use. Service worker is currently working as far as I've tested.
 
 ### Future fixes:
 
 1. Adjust margin and padding
 
-2. Improve on different media widths
+2. Improve UX on different media widths
 
-3. Add more features
+3. Add more features. Implement the other stages of this App.
+
+4. Pivot the focus of the project from a Yelp Clone to a fun quirky web app.
 
 
 
