@@ -1,9 +1,11 @@
 /* code credit to Alexandro Perez and his walkthroughh */
 
-if (navigator.serviceWorker) {
-    navigator.serviceWorker.register("../sw.js").then(function (reg) {
-        console.log("SW has been registered!");
-    }).catch((e) => {
-        console.log("Couldn't register SW \n", e);
-    });
+if ('serviceWorker' in navigator) {
+	navigator.serviceWorker.register('./sw.js')
+	.then(function() {
+		console.log('SW registration worked!');
+	})
+	.catch(function() {
+		console.log('SW registration failed!');
+	});
 }
