@@ -1,62 +1,59 @@
-// Code inspired by matthew cranford's walk through
+// Code inspired by matthew cranford's walk through and Alexandro Perez
 
-var cacheV = 'restaurant-reviews-v2';
+const cacheName = "restaurant-review-app";
+const staticCacheName = cacheName + "v1.0";
+const imgCache = cacheName + "img";
 
-const cacheFiles = [
-    '/',
-    '/restaurant.html',
-    '/index.html',
-    '/css/styles.css',
-    '/js/main.js',
-    '/js/restaurant_info.js',
-    '/js/dbhelper.js',
-    // '/js/sw_register.js',
-    '/img/1.jpg',
-    '/img/2.jpg',
-    '/img/3.jpg',
-    '/img/4.jpg',
-    '/img/5.jpg',
-    '/img/6.jpg',
-    '/img/7.jpg',
-    '/img/8.jpg',
-    '/img/9.jpg',
-    '/img/10.jpg',
-    '/data/restaurants.json'
+let allCaches = [
+    staticCacheName,
+    imgCache
 ];
 
-
-self.addEventListener('install', function(event) {
+self.addEventListener("install", function (event) {
     event.waitUntil(
-        caches.open(cacheV).then(function(cache) {
-            return cache.addAll(cacheFiles);
+        caches.open(staticCacheName).then(function (cache) {
+            return cache.addAll([
+                "/img/1.jpg",
+                "/img/2.jpg",
+                "/img/3.jpg",
+                "/img/4.jpg",
+                "/img/5.jpg",
+                "/img/6.jpg",
+                "/img/7.jpg",
+                "/img/8.jpg",
+                "/img/9.jpg",
+                "/img/10.jpg",
+                "/index.html",
+                "/restaurant.html",
+                "/css/styles.css",
+                "/js/dbhelper.js",
+                "/js/main.js",
+                "/js/restaurant_info.js",
+                "/data/restaurants.json"
+            ]);
         })
     );
 });
 
-self.addEventListener('activate', function(event) {
-    console.log('Service worker working, for now...');
-  });
-
-self.addEventListener('fetch', function(event) {
-    event.respondWith(caches.match(event.request)
-        .then(function(response) {
-            if(response) {
-                return response;
-            }
-            else {
-                //request no exist in cache
-                return fetch(event.request)
-                .then(function(response) {
-                    const cloneResponse = response.clone();
-                    caches.open(cacheV).then(function(cache) {
-                        cache.put(event.request, cloneResponse);
-                    })
-                    return response;
+self.addEventListener("activate", function (e) {
+    e.waitUntil(
+        caches.keys().then(function (names) {
+            return Promise.all(
+                names.filter(function (cache) {
+                    return cache.startsWith(cacheName) &&
+                        !cacheV.includes(cache);
+                }).map(function (cache) {
+                    return caches.delete(cache);
                 })
-                .catch(function() {
-                    console.log('Error with Service Worker!!!');
-                });
-            }
+            );
+        })
+    );
+});
+
+self.addEventListener("fetch", function (e) {
+    e.respondWith(
+        caches.match(e.request).then(function (response) {
+            return response || fetch(e.request);
         })
     );
 });

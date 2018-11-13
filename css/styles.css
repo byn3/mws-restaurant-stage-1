@@ -343,8 +343,11 @@ nav h1 a {
 	background-color: #f3f3f3;
 }
 
+h1 {
+  width: 40%;
+}
 #breadcrumb {
-	width: 100%;
+	width: 80vw;
 }
 .filter-options h2 {
   font-size: 1em;
@@ -388,4 +391,15 @@ nav h1 a {
 #reviews-container h4 {
   text-align: center;
 }
+
+nav{
+  margin-right: 2vw;
+  margin-left: 2vw;
+}
+
+.inside header, inside #footer {
+  position: absolute;
+}
+
+
 }
