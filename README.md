@@ -3,21 +3,25 @@
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
 # HOW TO RUN
-Clone this repo, cd into the directory.  
-Type this in the command line:  
-`python3 -m http.server 8000`  
-Now open a browser and enter `http://localhost:8000`  
+*Type this in the command line:*   
+Clone this repo `git clone https://github.com/byn3/mws-restaurant-stage-1.git`  
+CD into the directory `cd mws-restaurant-stage-1`  
+Start a local server `python3 -m http.server 8000`    
+Open a browser (like Chrome) and enter this in the URL `http://localhost:8000`    
 
-## This should be the site you see  
+# This should be the website you see  
 
-#### This is the front page.
+## This is the front page.
 ![Landing page of the website showing a map of NY and a selection of places to eat](https://github.com/byn3/mws-restaurant-stage-1/blob/master/img/Rest1.png)
+___
 
-#### This is the bottom of the front page.
+## This is the bottom of the front page.
 ![Screenshot of what a selection of the restauraunts look like](https://github.com/byn3/mws-restaurant-stage-1/blob/master/img/Rest2.png)
+___
 
-#### This is what the restauraunt info and reviews look like.
+## This is what the restauraunt info and reviews look like.
 ![Screen shot of what appears on the screen if a restauraunt is selected. Reviews of that place and the location pops up.](https://github.com/byn3/mws-restaurant-stage-1/blob/master/img/Rest3.png)
+___
 
 
 ## Project Overview: Stage 1
