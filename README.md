@@ -3,7 +3,7 @@
 #### _Three Stage Course Material Project - Restaurant Reviews_
 
 # HOW TO RUN
-*Type this in the command line:*   
+*Follow and type these in to the command line:*   
 Clone this repo `git clone https://github.com/byn3/mws-restaurant-stage-1.git`  
 CD into the directory `cd mws-restaurant-stage-1`  
 Start a local server `python3 -m http.server 8000`    
