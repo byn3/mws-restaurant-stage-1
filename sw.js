@@ -1,5 +1,5 @@
 // Code inspired by matthew cranford's walk through and Alexandro Perez
-
+// could have just used the dafault i guess
 let staticCache = 'restaurant-static-v1';
 
 self.addEventListener('install', function(event) {
