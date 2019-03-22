@@ -1,6 +1,6 @@
-# Front End Specialist Certification Course. STAGE ONE.
+# _Three Stage Course Material Project - Restaurant Reviews_
 ---
-#### _Three Stage Course Material Project - Restaurant Reviews_
+
 
 # HOW TO RUN
 *Follow and type these in to the command line:*   
